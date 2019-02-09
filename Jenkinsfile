@@ -1,12 +1,10 @@
-pipeline {
-  agent {
-    docker 'cloudbees/java-build-tools'
-  }
-  stages {
-    stage('build') {
-      steps {
-        sh 'mvn clean install'
-      }
+pipeline { 
+    agent any  
+    stages { 
+        stage('Build') { 
+            steps { 
+               echo 'This is a minimal pipeline.' 
+            }
+        }
     }
-  }
 }
